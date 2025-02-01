@@ -10,21 +10,21 @@ import ru.screamoov.bestlogger.utils.ConfigUtils;
 import ru.screamoov.bestlogger.utils.DateUtils;
 import ru.screamoov.bestlogger.utils.TXTWriter;
 
-public class PlayerJoinEvent implements Listener, IEvent {
-    public PlayerJoinEvent() {
+public class PlayerQuitEvent implements Listener, IEvent {
+    public PlayerQuitEvent() {
         if (ConfigUtils.enabled(this)) {
             Bukkit.getPluginManager().registerEvents(this, Main.getInstance());
         }
     }
 
     @EventHandler
-    public void event(org.bukkit.event.player.PlayerJoinEvent event) {
+    public void event(org.bukkit.event.player.PlayerQuitEvent event) {
         Player player = new Player(event.getPlayer(), this);
-        TXTWriter.appendToFile(player.textFile.getAbsolutePath(), DateUtils.getDateAndTime() + "Зашёл на сервер! [" + player.getData() + "]");
+        TXTWriter.appendToFile(player.textFile.getAbsolutePath(), DateUtils.getDateAndTime() + "Вышел с сервера! [" + player.getData() + "]");
     }
 
     @Override
     public String name() {
-        return "PLAYER_JOIN_EVENT";
+        return "PLAYER_QUIT_EVENT";
     }
 }
