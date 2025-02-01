@@ -2,3 +2,5 @@ name: bestLogger
 version: '${project.version}'
 main: ru.screamoov.bestlogger.Main
 api-version: '1.16'
+commands:
+  logger:
