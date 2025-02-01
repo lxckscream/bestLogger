@@ -10,8 +10,6 @@ import ru.screamoov.bestlogger.utils.ConfigUtils;
 import ru.screamoov.bestlogger.utils.DateUtils;
 import ru.screamoov.bestlogger.utils.TXTWriter;
 
-import javax.xml.crypto.Data;
-
 public class PlayerJoinEvent implements Listener, IEvent {
     public PlayerJoinEvent() {
         if (ConfigUtils.enabled(this)) {
