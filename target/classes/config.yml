@@ -18,3 +18,4 @@ ignored:
 logging:
   - "PLAYER_JOIN_EVENT" # Заход на сервер
   - "PLAYER_QUIT_EVENT" # Выход с сервера
+  - "PLAYER_CLOSE_INVENTORY" # Закрытие какого-либо инвентаря
