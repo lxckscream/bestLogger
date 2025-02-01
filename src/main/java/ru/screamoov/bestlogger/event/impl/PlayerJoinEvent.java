@@ -22,7 +22,7 @@ public class PlayerJoinEvent implements Listener, IEvent {
     @EventHandler
     public void event(org.bukkit.event.player.PlayerJoinEvent event) {
         Player player = new Player(event.getPlayer(), this);
-        TXTWriter.appendToFile(player.textFile.getPath(), DateUtils.getDateAndTime() + "Зашёл на сервер!");
+        TXTWriter.appendToFile(player.textFile.getAbsolutePath(), DateUtils.getDateAndTime() + "Зашёл на сервер!");
     }
 
     @Override
