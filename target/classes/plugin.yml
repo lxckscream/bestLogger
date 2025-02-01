@@ -1,0 +1,4 @@
+name: bestLogger
+version: '1.0-SNAPSHOT'
+main: ru.screamoov.bestlogger.Main
+api-version: '1.16'

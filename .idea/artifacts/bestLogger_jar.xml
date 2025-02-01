@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bestLogger:jar">
+    <output-path>$USER_HOME$/Desktop/test/plugins</output-path>
+    <root id="archive" name="bestLogger.jar">
+      <element id="module-output" name="bestLogger" />
+    </root>
+  </artifact>
+</component>
