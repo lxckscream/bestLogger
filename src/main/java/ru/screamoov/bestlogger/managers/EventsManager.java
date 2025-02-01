@@ -2,9 +2,7 @@ package ru.screamoov.bestlogger.managers;
 
 import ru.screamoov.bestlogger.Main;
 import ru.screamoov.bestlogger.event.IEvent;
-import ru.screamoov.bestlogger.event.impl.PlayerCloseInventory;
-import ru.screamoov.bestlogger.event.impl.PlayerJoinEvent;
-import ru.screamoov.bestlogger.event.impl.PlayerQuitEvent;
+import ru.screamoov.bestlogger.event.impl.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +19,10 @@ public class EventsManager {
                     register(new PlayerQuitEvent());
                 case "PLAYER_CLOSE_INVENTORY":
                     register(new PlayerCloseInventory());
+                case "PLAYER_CHAT_EVENT":
+                    register(new PlayerChatEvent());
+                case "PLAYER_COMMAND_EVENT":
+                    register(new PlayerCommandEvent());
 
             }
         }
